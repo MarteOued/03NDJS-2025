@@ -1,0 +1,63 @@
+/*   Node.js, c’est un environnement qui permet d’exécuter du JavaScript côté serveur (hors du navigateur).
+
+Il est basé sur V8(il lit et exécute du code JavaScript),le moteur JavaScript de Google Chrome.
+
+On peut l’utiliser pour faire des applications web, des API, des bots, etc.
+On a : les variables c’est comme une boîte où on peut ranger une valeur (un nombre, un mot, etc.) pour la réutiliser plus tard.
+Exemple : let personne = {
+  nom: "Ali",
+  age: 22
+};
+-Un objet, c’est un groupe de données liées entre elles.
+C’est comme une fiche avec plusieurs infos : nom, âge, ville…
+Chaque info a un nom (clé) et une valeur
+Exemple: let personne = {
+  nom: "Ali",
+  age: 22
+};
+- Un tableau, c’est une liste ordonnée d’éléments.
+Comme une liste de courses : chaque chose a une position (1er, 2e, etc.).
+On peut y stocker plein de choses : mots, nombres, objets, etc
+Exemple:  let fruits = ["pomme", "banane"];
+console.log(fruits[0]); // => "pomme"
+- if (age >= 18) {
+  console.log("Majeur");
+} else {
+  console.log("Mineur");
+}
+-Une boucle, c’est une action qui se répète automatiquement.
+on peut dire :
+
+    “Fais ça 5 fois”
+    ou
+    “Fais ça tant que c’est vrai”
+    Elle est utilisée pour répéter des tâches rapidement sans tout écrire à la main. Exemple : for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+- Et en fin, une fonction, est un bloc de code qu’on peut appeler à tout moment.
+on lui donne un nom, tu définis ce qu’elle doit faire, et tu peux l’utiliser quand tu veux. Exemple : function direBonjour(nom) {
+  console.log("Bonjour " + nom);
+}
+
+-  Types de données
+
+    String → "texte"
+
+    Number → 42
+
+    Boolean → true ou false
+
+    Array → ["a", "b"]
+
+    Object → { clé: valeur }
+
+    null, undefined → vide ou pas encore défini
+*/
+
+
