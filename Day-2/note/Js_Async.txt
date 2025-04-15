@@ -1,0 +1,52 @@
+cours du matin 
+
+le code asynchrone permet de :
+
+    lancer une opération qui prend du temps (comme lire un fichier, appeler une API, ou accéder à une base de données) sans bloquer le reste du programme.
+
+Exemple typique :
+
+    Lire un fichier
+
+    Envoyer une requête réseau
+
+    Attendre une réponse
+
+→ Au lieu d'attendre que l’opération soit finie pour continuer, JS passe à la suite et revient quand c’est prêt.
+
+Un callback ?
+
+Un callback (rappel) est une fonction passée en argument à une autre fonction. Elle est traité directement et si on a un problème on arrête tout. Cette technique permet à une fonction d'appeler une autre fonction.Une fonction de rappel peut s'exécuter après qu'une autre fonction a été terminée.
+
+
+Une Promise est un objet JavaScript qui représente une opération asynchrone en cours. Elle peut avoir 3 états :
+
+    pending (en attente)
+
+    fulfilled (terminée avec succès)
+
+    rejected (échouée)
+    
+ L'objet Promise supporte deux propriétés: l'état et le résultat.
+
+Alors qu'un objet Promise est "en attente" (travailler), le résultat n'est pas défini.
+
+Lorsqu'un objet Promise est "réalisé", le résultat est une valeur.
+
+Lorsqu'un objet Promise est "rejeté", le résultat est un objet d'erreur.
+
+My Promise.state	myPromise.result
+
+"en attente"	         non définis
+"Achever"	         une valeur de résultat
+"rejeté"	         un objet d'erreur
+
+on ne peut pas accéder à l'état et au résultat des propriétés de la Promise.
+
+on doit utiliser une méthode Promise pour gérer les promesses.
+
+async : C’est un mot-clé qu’on met devant une fonction pour dire qu’elle retourne automatiquement une Promise.
+
+await : Ça attend qu’une Promise soit résolue avant de passer à la suite.
+Mais on ne peut utiliser await qu'à l'intérieur d'une fonction async.
+
