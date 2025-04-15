@@ -1,16 +1,13 @@
 {
   "name": "scraper",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "AppModifie.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node AppModifie.js"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "axios": "^1.8.4",
-    "cheerio": "^1.0.0",
-    "puppeteer": "^24.6.1"
+    "cheerio": "^1.0.0-rc.12"
   }
 }
+
