@@ -1,0 +1,192 @@
+ 1. La différence entre frontend et backend
+
+    Le frontend, c’est la partie visible d’un site web, celle que l’utilisateur voit et avec laquelle il interagit.
+    Le backend, c’est la partie cachée, sur le serveur. C’est lui qui s’occupe de la logique, des traitements, et de la communication avec la base de données.
+
+ 2. Les technologies du frontend
+
+    Pour construire une page web, on utilise trois langages principaux côté frontend :
+
+    HTML : il sert à structurer la page (titres, paragraphes, formulaires…).
+
+    CSS : il gère l’apparence (couleurs, position, tailles, etc.).
+
+    JavaScript : il rend la page interactive, par exemple pour afficher des infos sans recharger la page.
+
+    JavaScript permet aussi d’utiliser des techniques comme AJAX ou fetch() pour envoyer des requêtes au serveur sans recharger la page, ce qui rend le site plus rapide et dynamique.
+
+ 3. Les technologies du backend
+
+    Le backend est exécuté sur le serveur.
+    Il s’occupe de :
+
+    - Traiter les données envoyées par le frontend,
+
+    - Gérer les utilisateurs (connexion, inscription…),
+
+    - Communiquer avec une base de données.
+
+    - Comme langages backend, on peut utiliser par exemple :
+
+    . PHP (très répandu, surtout avec MySQL),
+
+    . Node.js (qui permet d’utiliser JavaScript côté serveur),
+
+    Python, Java, etc.
+
+ 4. La base de données
+
+    Une base de données sert à stocker les informations d’un site : utilisateurs, produits, messages, etc.
+    - Le backend s’en sert pour :
+
+    Enregistrer de nouvelles infos,
+
+    Lire des infos existantes,
+
+    Les mettre à jour ou les supprimer.
+
+    - Le frontend ne peut pas accéder directement à la base de données. Il passe toujours par le backend.
+
+ 5. Node.js : à quoi il sert ?
+
+Normalement, JavaScript ne s’exécute que dans le navigateur.
+Node.js permet d’exécuter JavaScript sur le serveur, donc côté backend.
+
+    Grâce à Node.js, on peut faire :
+
+    Des serveurs web,
+
+    Des API,
+
+    Parler à des bases de données,
+
+    Lire ou écrire des fichiers, etc.
+
+En gros, Node.js permet de faire tout le backend avec JavaScript. C’est très pratique, car ça évite de changer de langage.
+
+ 6. Java vs JavaScript
+
+    Même si leurs noms se ressemblent, Java et JavaScript sont très différents :
+
+	      Java	                                         JavaScript
+
+Type	   Langage compilé	                            Langage interprété
+
+Où ?	   Applications, backend, Android	            Navigateur, ou backend (avec Node.js)
+
+Syntaxe	   Plus lourde, stricte	                            Plus flexible
+
+Langage compilé :
+
+    Un langage compilé passe par une étape de compilation :
+    le code source est transformé en un fichier exécutable avant d’être lancé.
+
+Exemples : C, C++, Java
+
+    Un fichier exécutable est un fichier que l’ordinateur peut lancer directement pour faire quelque chose. Il est déjà traduit en langage machine (des 0 et 1 que l’ordi comprend).
+
+Langage interprété :
+
+    Un langage interprété est lu ligne par ligne par un programme appelé interpréteur, pendant l'exécution.
+
+Exemples : JavaScript, Python, PHP
+
+    Un interpréteur est un programme spécial qui lit ton code source ligne par ligne, au moment où tu l'exécutes.Il traduit en direct chaque ligne pour que l’ordi comprenne ce qu’il doit faire.
+
+ 7. En résumé
+
+    Pour construire un site web complet :
+
+    Le frontend s’occupe de l’interface avec HTML, CSS, JavaScript.
+
+    Le backend traite les infos, par exemple avec PHP ou Node.js.
+
+    La base de données stocke les infos.
+
+    JavaScript est très puissant car il peut être utilisé dans le navigateur et sur le serveur grâce à Node.js.
+    
+  
+   . o2switch, c’est un hébergeur web français tout-en-un, facile à utiliser, avec un bon rapport qualité/prix.
+    on peut y héberger :
+
+    un site HTML/CSS/JS,
+
+    un site WordPress,
+
+    un projet PHP avec base de données.
+
+
+MVC : Model – View – Controller
+C’est une architecture logicielle qu’on utilise pour organiser un projet web ou logiciel.
+
+
+Les 3 parties du MVC
+1. Model (Modèle)
+
+    C’est la partie qui gère les données (et la logique métier).
+
+    Il parle avec la base de données
+
+    Il connaît les règles du jeu : ce qui est valide, ce qui ne l’est pas, comment calculer une note, etc.
+
+Exemple :
+Le modèle "Produit" sait comment récupérer tous les produits à prix < 50€, ou ajouter un nouveau produit.
+
+2. View (Vue)
+
+    C’est ce que l’utilisateur voit à l’écran.
+
+    Page HTML, formulaire, tableau, bouton, etc.
+
+    Elle n’a pas de logique, elle ne fait qu’afficher ce qu’on lui donne.
+
+Exemple :
+Une vue "liste des produits" qui affiche les noms, prix et images que le contrôleur lui envoie.
+
+3. Controller (Contrôleur)
+
+    C’est le chef d’orchestre. Il gère les interactions entre l’utilisateur, le modèle et la vue.
+
+    Il reçoit la requête (depuis une route)
+
+    Il appelle le bon modèle
+
+    Il envoie les infos à la vue
+
+Exemple :
+Quand on va sur /produits, le contrôleur va :
+
+    demander au modèle les produits,
+
+    envoyer ça à la vue pour l’afficher.
+
+L’utilisateur, c’est le client qui passe commande (clic sur un bouton, remplit un formulaire...).
+
+Mon application, c’est toute une équipe bien organisée :
+
+    Routes = réceptionniste
+
+    Contrôleur (controller) = chef d'équipe
+
+    Modèle (model) = comptable qui parle avec la base de données
+
+    DB (Database) = le classeur géant où on garde toutes les infos (clients, produits...)
+    
+    Résumé (MVC + routes)
+
+UTILISATEUR → URL /produits
+     |
+     v
+  ROUTE : "Ok, on appelle le contrôleur Produits"
+     |
+     v
+  CONTROLLER : "Je vais chercher les produits dans le modèle"
+     |
+     v
+  MODEL : "Je récupère les données dans la base"
+     |
+     v
+  DB (BASE DE DONNÉES)
+     |
+     v
+  MODEL → CONTROLLER → envoie à l'utilisateur une page ou un JSON.
