@@ -7,19 +7,19 @@ const userRoutes = require("./routes/user");
 
 const app = express();
 
-// Connexion DB
+// Connexion à la base de données
 connectDB();
 
-// Middlewares
+// Middleware pour parser le JSON
 app.use(express.json());
 
 // Routes
-app.use("/api", authRoutes);
-app.use("/api", userRoutes);
+app.use("/api/auth", authRoutes);     
+app.use("/api/users", userRoutes);    
 
 // Démarrage du serveur
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
-);
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
 
